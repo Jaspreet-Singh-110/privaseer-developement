@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracker Blocking Test Page</title>
+  </head>
+  <body>
+    <main>
+      <h1>Tracker Blocking Test</h1>
+      <p>This page intentionally includes known tracker URLs.</p>
+    </main>
+
+    <!-- Known blocked domains from public/data/blocking-rules.json -->
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=TEST-E2E" async></script>
+    <script src="https://connect.facebook.net/en_US/fbevents.js" async></script>
+    <img
+      src="https://www.google-analytics.com/collect?v=1&t=pageview&tid=UA-TEST-1"
+      alt=""
+      width="1"
+      height="1"
+    />
+  </body>
+</html>

@@ -1,0 +1,74 @@
+/**
+ * ARCHIVED FILE
+ * Original Author: Jaspreet
+ * Reason: Replaced by new Privacy Advisor / Alternative Finder implementation
+ * Date Archived: 2026-04-16
+ * This file is preserved for historical reference and is not used in production.
+ */
+
+{
+  "manifest_version": 3,
+  "name": "Privaseer",
+  "version": "1.0.0",
+  "description": "Privacy-first browser extension with real-time tracker blocking, privacy scoring, and consent scanning",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://llffqxdhpgsqnpzeznaq.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content-scripts/consent-scanner.ts"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content-scripts/email-autofill.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "tracker_blocklist",
+        "enabled": true,
+        "path": "data/blocking-rules.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "_comment_backup_wars": "\"resources\": [\"data/privacy-rules.json\", \"data/tracker-lists.json\", \"data/blocking-rules.json\"], \"matches\": [\"<all_urls>\"]",
+      "resources": ["data/privacy-rules.json"],
+      "matches": ["http://*/*", "https://*/*"]
+    },
+    {
+      "resources": ["src/welcome/welcome.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

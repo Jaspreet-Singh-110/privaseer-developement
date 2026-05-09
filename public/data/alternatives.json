@@ -1,0 +1,171 @@
+{
+  "alternatives": {
+    "gmail.com": [
+      {
+        "name": "Proton Mail",
+        "url": "https://proton.me/mail",
+        "description": "End-to-end encrypted email with zero-access encryption"
+      },
+      {
+        "name": "Tutanota",
+        "url": "https://tutanota.com",
+        "description": "Secure email service based in Germany with built-in encryption"
+      }
+    ],
+    "google.com": [
+      {
+        "name": "DuckDuckGo",
+        "url": "https://duckduckgo.com",
+        "description": "Privacy-focused search engine that doesn't track you"
+      },
+      {
+        "name": "Startpage",
+        "url": "https://www.startpage.com",
+        "description": "Google results without the tracking and profiling"
+      }
+    ],
+    "youtube.com": [
+      {
+        "name": "Invidious",
+        "url": "https://invidious.io",
+        "description": "Open-source YouTube frontend without tracking"
+      },
+      {
+        "name": "FreeTube",
+        "url": "https://freetubeapp.io",
+        "description": "Desktop YouTube player focused on privacy"
+      }
+    ],
+    "chrome": [
+      {
+        "name": "Mozilla Firefox",
+        "url": "https://www.mozilla.org/firefox/",
+        "description": "Open-source browser with strong privacy protections"
+      },
+      {
+        "name": "Brave Browser",
+        "url": "https://brave.com",
+        "description": "Privacy-first browser with built-in ad blocking"
+      }
+    ],
+    "maps.google.com": [
+      {
+        "name": "OpenStreetMap",
+        "url": "https://www.openstreetmap.org",
+        "description": "Community-driven maps without tracking"
+      }
+    ],
+    "drive.google.com": [
+      {
+        "name": "Nextcloud",
+        "url": "https://nextcloud.com",
+        "description": "Self-hosted cloud storage with full data control"
+      },
+      {
+        "name": "Tresorit",
+        "url": "https://tresorit.com",
+        "description": "End-to-end encrypted cloud storage"
+      }
+    ],
+    "whatsapp.com": [
+      {
+        "name": "Signal",
+        "url": "https://signal.org",
+        "description": "End-to-end encrypted messaging with no data collection"
+      }
+    ],
+    "facebook.com": [
+      {
+        "name": "Mastodon",
+        "url": "https://joinmastodon.org",
+        "description": "Decentralized social network with no ads or tracking"
+      }
+    ],
+    "instagram.com": [
+      {
+        "name": "Pixelfed",
+        "url": "https://pixelfed.org",
+        "description": "Decentralized photo sharing platform"
+      }
+    ],
+    "twitter.com": [
+      {
+        "name": "Mastodon",
+        "url": "https://joinmastodon.org",
+        "description": "Decentralized, open-source social network"
+      }
+    ],
+    "x.com": [
+      {
+        "name": "Mastodon",
+        "url": "https://joinmastodon.org",
+        "description": "Decentralized, open-source social network"
+      }
+    ],
+    "zoom.us": [
+      {
+        "name": "Jitsi Meet",
+        "url": "https://meet.jit.si",
+        "description": "Open-source video conferencing with no account required"
+      }
+    ],
+    "dropbox.com": [
+      {
+        "name": "Nextcloud",
+        "url": "https://nextcloud.com",
+        "description": "Self-hosted file sync and sharing"
+      }
+    ],
+    "outlook.com": [
+      {
+        "name": "Proton Mail",
+        "url": "https://proton.me/mail",
+        "description": "Encrypted email service based in Switzerland"
+      }
+    ],
+    "docs.google.com": [
+      {
+        "name": "CryptPad",
+        "url": "https://cryptpad.fr",
+        "description": "End-to-end encrypted collaborative editing"
+      }
+    ]
+  },
+  "trackerAlternatives": {
+    "google-analytics.com": [
+      {
+        "name": "Plausible Analytics",
+        "url": "https://plausible.io",
+        "description": "Lightweight, privacy-friendly web analytics"
+      }
+    ],
+    "doubleclick.net": [
+      {
+        "name": "EthicalAds",
+        "url": "https://www.ethicalads.io",
+        "description": "Privacy-respecting advertising for developers"
+      }
+    ],
+    "facebook.net": [
+      {
+        "name": "Mastodon",
+        "url": "https://joinmastodon.org",
+        "description": "Social networking without surveillance"
+      }
+    ],
+    "hotjar.com": [
+      {
+        "name": "PostHog",
+        "url": "https://posthog.com",
+        "description": "Open-source product analytics with self-hosting option"
+      }
+    ],
+    "mixpanel.com": [
+      {
+        "name": "PostHog",
+        "url": "https://posthog.com",
+        "description": "Open-source alternative to Mixpanel"
+      }
+    ]
+  }
+}

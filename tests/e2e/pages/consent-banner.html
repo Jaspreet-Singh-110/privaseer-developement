@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consent Banner Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 200vh;
+      }
+      #onetrust-banner-sdk {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: #f4f4f4;
+        border-top: 1px solid #ddd;
+        padding: 16px;
+      }
+      #accept-cookies {
+        padding: 10px 16px;
+        border: 1px solid #2e5aac;
+        background: #2e5aac;
+        color: white;
+        cursor: pointer;
+        width: 160px;
+        height: 40px;
+        font-size: 16px;
+      }
+      #reject-cookies {
+        position: absolute;
+        top: 2000px;
+        left: 16px;
+        padding: 8px 12px;
+        border: 1px solid #999;
+        background: white;
+        cursor: pointer;
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Consent Banner Test</h1>
+      <p>This page includes a cookie banner for scanner verification.</p>
+    </main>
+    <div
+      id="onetrust-banner-sdk"
+      class="onetrust-banner cookie-consent"
+      role="dialog"
+      aria-label="cookie consent"
+    >
+      <p>We use cookies to improve your experience.</p>
+      <button id="accept-cookies">Accept All</button>
+      <button id="reject-cookies">Reject All</button>
+    </div>
+  </body>
+</html>
