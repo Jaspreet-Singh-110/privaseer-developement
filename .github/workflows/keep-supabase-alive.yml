@@ -2,31 +2,29 @@ name: Keep Supabase Active
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # Every 6 hours
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Keep Supabase alive with real API call
+      - name: Ping database via REST API
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
-          # This hits the REST API – counts as activity
-          RESPONSE=$(curl -s -w "\n%{http_code}" \
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
             -H "apikey: $SUPABASE_ANON_KEY" \
             -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
-            "$SUPABASE_URL/rest/v1/?select=1")
+            "$SUPABASE_URL/rest/v1/keepalive?id=eq.1&select=id")
           
-          HTTP_STATUS=$(echo "$RESPONSE" | tail -n1)
           echo "HTTP Status: $HTTP_STATUS"
           
-          if [ "$HTTP_STATUS" -eq 200 ] || [ "$HTTP_STATUS" -eq 400 ]; then
+          if [ "$HTTP_STATUS" -eq 200 ]; then
             echo "✅ Supabase active – database ping successful"
             exit 0
           else
-            echo "❌ Failed to ping database. Status: $HTTP_STATUS"
+            echo "❌ Failed. Status: $HTTP_STATUS"
             exit 1
           fi
